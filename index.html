@@ -18,35 +18,36 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon-180.png">
   <link rel="icon" href="/favicon.png" sizes="any">
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#17110d">
-  <link rel="preload" href="/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <meta name="theme-color" content="#0e0e0f">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="embers" id="embers" aria-hidden="true"></div>
+  <header>
+    <a class="brand" href="/"><img src="/icons/favicon-64.png" alt="" width="32" height="32">Firecone</a>
+    <nav>
+      <a href="https://status.firecone.eu/">Status</a>
+      <a href="mailto:firecone.eu@gmail.com">Contact</a>
+    </nav>
+  </header>
+
   <main>
-    <img class="logo" src="/icons/favicon-128.png" alt="Firecone" width="72" height="72">
-    <h1 class="name">FIRECONE</h1>
-    <p class="date">22.11.2026</p>
-    <p class="sub">Free Minecraft hosting is coming back.</p>
+    <p class="kicker">Free Minecraft hosting returns</p>
+    <h1>22.11.2026</h1>
 
     <div class="timer" id="timer" role="timer" aria-label="Time until launch">
       <div><b id="d">00</b><span>days</span></div>
       <div><b id="h">00</b><span>hours</span></div>
-      <div><b id="m">00</b><span>min</span></div>
-      <div><b id="s">00</b><span>sec</span></div>
+      <div><b id="m">00</b><span>minutes</span></div>
+      <div><b id="s">00</b><span>seconds</span></div>
     </div>
-    <p class="live" id="live" hidden>WE ARE LIVE</p>
+    <p class="live" id="live" hidden>We are live.</p>
 
     <div class="actions">
-      <a class="btn primary" href="https://discord.gg/MTkJdxNkSH">Join Discord</a>
+      <a class="btn primary" href="https://discord.gg/MTkJdxNkSH">Join the Discord</a>
       <a class="btn" href="https://panel.firecone.eu/">Panel</a>
     </div>
   </main>
-  <footer>
-    <a href="https://status.firecone.eu/">Status</a>
-    <a href="mailto:firecone.eu@gmail.com">Contact</a>
-  </footer>
+
   <script>
     // 22 Nov 2026, 00:00 Prague time (CET, UTC+1)
     var target = Date.parse('2026-11-22T00:00:00+01:00');
@@ -62,19 +63,6 @@
       if (t === 0) { timer.hidden = true; live.hidden = false; }
     }
     tick(); setInterval(tick, 1000);
-
-    // rising pixel embers
-    (function(){
-      var box = document.getElementById('embers');
-      for (var i = 0; i < 28; i++) {
-        var e = document.createElement('i');
-        var size = [4, 6, 8][Math.floor(Math.random() * 3)];
-        e.style.cssText = 'left:' + Math.random() * 100 + '%;width:' + size + 'px;height:' + size + 'px;' +
-          'animation-duration:' + (7 + Math.random() * 9) + 's;animation-delay:-' + Math.random() * 16 + 's;' +
-          'background:' + ['#f97316', '#fb923c', '#ea580c', '#fdba74'][Math.floor(Math.random() * 4)];
-        box.appendChild(e);
-      }
-    })();
   </script>
 </body>
 </html>
