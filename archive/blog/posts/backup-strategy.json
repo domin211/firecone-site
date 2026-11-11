@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "slug": "backup-strategy",
+    "title": "Backups at Firecone",
+    "excerpt": "Snapshot cadence, restore drills, and retention policies to safeguard your worlds.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "External hard drives stacked beside a laptop",
+    "category": "Resilience",
+    "published": "2024-07-19",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/backup-strategy",
+    "keywords": [
+      "minecraft backup strategy",
+      "world backups",
+      "disaster recovery",
+      "resilience planning"
+    ],
+    "readTime": "9 min read",
+    "description": "How Firecone handles backups and how you can get help if you need one restored.",
+    "seoTitle": "Backups at Firecone - Firecone Blog",
+    "seoDescription": "How Firecone backups work, how to request one, and what to do if you need a restore."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Minecraft worlds represent hours of building and play, so we treat backups as a core service. Every active server on Firecone is backed up automatically and stored off-site. This means crashes or accidental griefing don’t have to mean the end of a project."
+    },
+    {
+      "type": "markdown",
+      "content": "## How It Works"
+    },
+    {
+      "type": "markdown",
+      "content": "Backups run automatically at regular intervals and are kept for a rolling period. These snapshots are stored separately from the live server so they survive hardware failures or mistakes. We also keep longer-term archives for important projects on request."
+    },
+    {
+      "type": "markdown",
+      "content": "If you’re curious about schedules or retention for your server, just open a ticket, we’ll confirm exactly what’s configured."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## Requesting a Restore"
+    },
+    {
+      "type": "markdown",
+      "content": "Need to roll back? Open a support ticket via the panel or Discord. Include the server name and approximate time of the backup you want restored. Most restores are completed the same day, but large worlds may take longer depending on storage and network speed."
+    },
+    {
+      "type": "markdown",
+      "content": "## Good Habits"
+    },
+    {
+      "type": "markdown",
+      "content": "Before big changes, such as new mods, datapacks, or events, you can also request a manual snapshot. That way, if something breaks, we can rewind cleanly. Just drop a ticket or message in Discord."
+    },
+    {
+      "type": "markdown",
+      "content": "For advice on keeping servers safe beyond backups, check out our{\" \"} [Security Checklist](/blog/security-checklist)."
+    }
+  ]
+}

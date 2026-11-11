@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "slug": "latency-benchmarks",
+    "title": "Latency Benchmarks for Global Players",
+    "excerpt": "Collect route data and publish expectations so global players feel in sync.",
+    "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Colorful world map pinned with travel markers",
+    "category": "Performance",
+    "published": "2024-06-07",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/latency-benchmarks",
+    "keywords": [
+      "minecraft latency",
+      "network benchmarks",
+      "global server hosting",
+      "connectivity planning"
+    ],
+    "readTime": "9 min read",
+    "description": "Collect route data, publish expectations, and act on feedback so global our team players stay in sync.",
+    "seoTitle": "Latency Benchmarks for Global Players - Minecraft Hosting Blog",
+    "seoDescription": "Run scientific latency benchmarks, publish transparent reports, and keep global Minecraft communities aligned with our team's workflow."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Minecraft may be blocky, but networking is anything but. When your players span continents, latency management becomes as important as world backups. our team runs quarterly benchmark campaigns to measure routing quality, communicate expectations, and prioritize infrastructure work. This guide walks through our method so you can replicate it for your own community."
+    },
+    {
+      "type": "markdown",
+      "content": "You will need three ingredients: reliable measurement tools, a communication plan, and a feedback loop that ties community reports back into operations. Pair this article with the [Performance Tuning Checklist](/blog/performance-tuning) so you know how latency issues impact tick rate."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Build a Distributed Testing Toolkit"
+    },
+    {
+      "type": "markdown",
+      "content": "Start by selecting endpoints that represent your player base. our team targets Helsinki, Falkenstein, and Montreal, mapping each to a series of cloud probes and volunteer-run Raspberry Pi nodes. We schedule `mtr` tests every hour and store the output in InfluxDB."
+    },
+    {
+      "type": "markdown",
+      "content": "Combine automated tests with manual sampling. Encourage community captains to run `traceroute` during peak hours and submit results via a shared form. The more data points you collect, the easier it is to separate localized ISP issues from widespread congestion."
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Benchmark and Visualize Results"
+    },
+    {
+      "type": "markdown",
+      "content": "Raw numbers do not tell a story—visuals do. We convert our metrics into Grafana dashboards with percentile bands and rolling averages. Each dataset tracks latency, jitter, and packet loss so we can see when a route becomes unstable. The example below summarizes a recent snapshot."
+    },
+    {
+      "type": "markdown",
+      "content": "| Region | Median ping | 95th percentile | Notes |\n| --- | --- | --- | --- |\n| Northern Europe | 31 ms | 52 ms | Stable; primary datacenter region |\n| North America East | 78 ms | 132 ms | Slight evening spike; coordinate events earlier |\n| Asia Pacific | 164 ms | 248 ms | Investigating Singapore relay options |"
+    },
+    {
+      "type": "markdown",
+      "content": "Share dashboards with your team. If a spike appears, annotate it with context (e.g., upstream maintenance or DDoS mitigation) so future reviews make sense."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Publish Transparent Latency Reports"
+    },
+    {
+      "type": "markdown",
+      "content": "Data without communication breeds speculation. our team publishes a monthly “network weather report” on the blog and in Discord. Each post includes baseline numbers, upcoming infrastructure work, and advice for players (switching DNS resolvers, checking Wi-Fi interference, or using wired connections)."
+    },
+    {
+      "type": "markdown",
+      "content": "Provide templates so players can submit their own diagnostics. We mirror this in the [Automation Runbook](/blog/automation-runbook) by automating the collection of form responses into a shared spreadsheet."
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Coordinate With Providers and Respond Quickly"
+    },
+    {
+      "type": "markdown",
+      "content": "When benchmarks reveal a persistent issue, escalate with concrete evidence. Share timestamps, traceroutes, and impact summaries with your hosting provider. our team also maintains relationships with education networks and esports orgs who can provide alternate routes during large events."
+    },
+    {
+      "type": "markdown",
+      "content": "Sometimes the fix is within your control. Consider deploying a proxy or Anycast GRE tunnel to bring remote players closer logically. Plan these changes alongside the [Hosting Blueprint](/blog/hosting-blueprint) so budgeting and transparency stay aligned."
+    },
+    {
+      "type": "markdown",
+      "content": "## 5. Close the Feedback Loop"
+    },
+    {
+      "type": "markdown",
+      "content": "After remediation, celebrate improvements and document lessons learned. Update your dashboards, publish a follow-up blog post, and thank the players who contributed data. Archive the incident in your runbook so future volunteers can see how you solved it."
+    },
+    {
+      "type": "markdown",
+      "content": "Integrate findings with other teams. Performance specialists might adjust simulation distance, while moderators warn communities about expected maintenance. This collaboration keeps everyone rowing in the same direction."
+    },
+    {
+      "type": "related-guides",
+      "title": "Keep Players in the Loop",
+      "content": "Latency benchmarks shine when paired with other operational habits. Dive deeper with these our resources.\n\n- Tune gameplay experience using the [Performance Tuning Checklist](/blog/performance-tuning).\n- Automate monitoring alerts with the [Automation Runbook for Minecraft Hosts](/blog/automation-runbook).\n- Share transparency wins by adapting the [Community Hosting Blueprint](/blog/hosting-blueprint) communication practices."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "slug": "security-checklist",
+    "title": "Minecraft Server Security Checklist",
+    "excerpt": "Permission hygiene, monitoring, and contingency plans to keep griefers out.",
+    "image": "https://images.unsplash.com/photo-1517249361621-f11084eb8b0b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Close-up of a padlock securing a server cabinet",
+    "category": "Security",
+    "published": "2024-07-05",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/security-checklist",
+    "keywords": [
+      "minecraft server security",
+      "griefing prevention",
+      "security checklist",
+      "server safety"
+    ],
+    "readTime": "11 min read",
+    "description": "Lock down logins, audit permissions, and monitor threats to keep griefers out of your your worlds.",
+    "seoTitle": "Minecraft Server Security Checklist - Minecraft Hosting Blog",
+    "seoDescription": "Lock down logins, audit permissions, and prepare incident playbooks so your Minecraft server stays safe for every player."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Security is a habit, not a setting. our team hosts youth groups, streamers, and classrooms, so we build multiple layers of defense around every Minecraft world. This checklist distills our core practices into actions you can complete today. Work through it once per quarter—or any time staffing changes—to keep your community safe."
+    },
+    {
+      "type": "markdown",
+      "content": "Pair this guide with the [Automation Runbook](/blog/automation-runbook) and [Backup Strategy](/blog/backup-strategy) so operational and recovery plans stay in sync."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Protect Administrative Accounts"
+    },
+    {
+      "type": "markdown",
+      "content": "Begin with identity hygiene. Require two-factor authentication on all panel accounts, rotate passwords every six months, and remove access immediately when volunteers step back. We maintain an access roster that maps each account to their responsibilities and last login date."
+    },
+    {
+      "type": "markdown",
+      "content": "- ✅ Enable TOTP-based 2FA for panel and ticketing systems.\n- ✅ Use unique email aliases for role accounts (e.g., moderation@example.com).\n- ✅ Store recovery codes in a password manager shared with leadership."
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Harden In-Game Permissions"
+    },
+    {
+      "type": "markdown",
+      "content": "Operator status should be rare. Use LuckPerms or another permissions plugin to create clearly scoped groups: players, trusted, moderators, and admins. Assign commands intentionally and log any temporary escalations. For event nights, we clone the world and use limited-time roles so experiments do not spill into the main server."
+    },
+    {
+      "type": "markdown",
+      "content": "Document changes in a shared changelog. When we revoke a permission, we explain the context to prevent confusion later. This practice mirrors the governance approach from the [Hosting Blueprint](/blog/hosting-blueprint)."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Secure Infrastructure and Network Access"
+    },
+    {
+      "type": "markdown",
+      "content": "Review firewalls monthly. Restrict panel access to HTTPS, disable unused ports, and ensure SFTP credentials use SSH keys instead of passwords. our team automatically rate-limits login attempts; if you self-host, configure fail2ban or a similar tool."
+    },
+    {
+      "type": "markdown",
+      "content": "Monitor network anomalies using the techniques in the [Latency Benchmarks](/blog/latency-benchmarks) guide. Sudden spikes in latency or packet loss can indicate attack traffic or misconfigured proxies."
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Monitor, Log, and Alert"
+    },
+    {
+      "type": "markdown",
+      "content": "Telemetry is your early warning system. Enable audit logs for panel actions, console commands, and plugin updates. Send alerts to a private Discord channel when a login fails repeatedly or when an operator command runs outside scheduled maintenance. Store logs for at least 30 days in a secure bucket so you can investigate incidents retroactively."
+    },
+    {
+      "type": "markdown",
+      "content": "We also automate weekly moderation sweeps. Volunteers review flagged chat messages, new plugin uploads, and suspicious teleport requests. Document findings and note any follow-up actions required."
+    },
+    {
+      "type": "markdown",
+      "content": "## 5. Prepare and Practice Incident Response"
+    },
+    {
+      "type": "markdown",
+      "content": "Even with prevention, incidents happen. Maintain a private response guide that includes communication templates, rollback procedures, and legal contacts if minors are involved. Practice tabletop drills twice a year: simulate a server breach, a griefing spree, or data loss. Track the timeline and update playbooks based on lessons learned."
+    },
+    {
+      "type": "markdown",
+      "content": "Coordinate response plans with your [Backup Strategy](/blog/backup-strategy) to ensure restoration steps are clear. After any incident, publish a public-facing summary to retain trust."
+    },
+    {
+      "type": "markdown",
+      "content": "## 6. Educate Your Community"
+    },
+    {
+      "type": "markdown",
+      "content": "Security thrives when players understand expectations. Pin safety reminders in Discord, highlight phishing examples, and encourage two-factor authentication on Minecraft and Microsoft accounts. Offer parents and educators a quick-start guide explaining how our team handles data privacy."
+    },
+    {
+      "type": "markdown",
+      "content": "Provide easy reporting channels. A form, a dedicated email, and an anonymous tip box ensure players speak up when something feels wrong. Respond quickly—even if it is just to acknowledge receipt."
+    },
+    {
+      "type": "markdown",
+      "content": "## 7. Review Third-Party Integrations"
+    },
+    {
+      "type": "markdown",
+      "content": "Many communities rely on bots, analytics widgets, or payment processors. Perform quarterly reviews of each integration: confirm scopes are still necessary, rotate API keys, and ensure privacy policies align with your community standards. Remove unused OAuth apps so they cannot be abused later."
+    },
+    {
+      "type": "markdown",
+      "content": "When you integrate new services, add them to your security inventory with owner details and contact information. This makes it easier to respond if a provider suffers an outage or data breach. Coordinate these updates with the transparency reports described in the [Hosting Blueprint](/blog/hosting-blueprint) so players know how their data flows."
+    },
+    {
+      "type": "related-guides",
+      "title": "Keep Your Defenses Layered",
+      "content": "Security is stronger when paired with resilient infrastructure. Use these our resources to round out your defenses.\n\n- Automate log collection with the [Automation Runbook for Minecraft Hosts](/blog/automation-runbook).\n- Plan recovery drills with the [Designing a Backup Strategy](/blog/backup-strategy) article.\n- Align safety policies with the community focus in the [Community Hosting Blueprint](/blog/hosting-blueprint)."
+    }
+  ]
+}

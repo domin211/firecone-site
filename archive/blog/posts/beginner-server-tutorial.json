@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "slug": "beginner-server-tutorial",
+    "title": "Beginner Tutorial: Launching Your First Minecraft Server",
+    "excerpt": "A friendly walk-through from account creation to world backups so your first community server starts strong.",
+    "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Person typing on a laptop with code on screen",
+    "category": "Getting Started",
+    "published": "2024-02-02",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/beginner-server-tutorial",
+    "keywords": [
+      "beginner minecraft server",
+      "minecraft tutorial",
+      "server setup guide",
+      "minecraft hosting tips"
+    ],
+    "readTime": "13 min read",
+    "description": "Create an account, configure settings, invite friends, and keep your first community server safe and organized.",
+    "seoTitle": "Beginner Tutorial: Launching Your First Minecraft Server - Minecraft Hosting Blog",
+    "seoDescription": "Create your hosting account, configure world settings, onboard friends, and keep your first Minecraft server secure with this detailed step-by-step tutorial."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Spinning up a Minecraft server feels like a giant leap when you are new to hosting. This guide breaks the journey into small milestones so you can celebrate progress rather than wrestle with files. We will create an account, configure the first world, invite friends, and adopt the same safety routines our volunteer admins use for community events and classrooms."
+    },
+    {
+      "type": "markdown",
+      "content": "Throughout the tutorial we link to deeper references, performance tuning, automation, and security, so you can grow at your own pace once the basics click. Bookmark this article and revisit it whenever you launch new seasons."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Create Your Hosting Account and Server"
+    },
+    {
+      "type": "markdown",
+      "content": "Visit [panel.examplehost.com](https://panel.examplehost.com) and create an account with an email you check daily. Choose a strong password and enable two-factor authentication during the first login. Our admins accept TOTP apps like Authy or Google Authenticator; enabling 2FA prevents griefers from hijacking your world."
+    },
+    {
+      "type": "markdown",
+      "content": "After verifying your email, click _Create server_. Name the project after your community, “Skyward SMP” or “Jakes Super Duper Proper Servery Machiney Thingey” (or maybe not), so it is easy to spot in the dashboard. Pick the region closest to most players to minimize latency. For beginners we recommend the latest Paper build because it maintains vanilla compatibility while offering plugin support."
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Configure Core Settings Before Opening the World"
+    },
+    {
+      "type": "markdown",
+      "content": "Head to the console tab and watch the first boot. When the log settles, stop the server so you can customize files safely. Download the auto-generated `server.properties` file and adjust essentials:"
+    },
+    {
+      "type": "markdown",
+      "content": "- Set `difficulty=normal` (or your preference) and `pvp=true/false` to match your vibe.\n- Add a friendly `motd` message so players see your branding in the multiplayer list.\n- Enable `white-list=true` while you onboard the first wave of friends.\n- Adjust `view-distance` to 8 chunks for a balance between exploration and performance."
+    },
+    {
+      "type": "markdown",
+      "content": "Upload the edited file, then visit the Backups tab and enable automated nightly snapshots. Our service stores copies in a separate location so you can recover from mistakes, malware, or corrupted chunks. Before restarting, upload your own world seed or datapack pack if you want a customized spawn experience."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Establish Roles and Essential Plugins"
+    },
+    {
+      "type": "markdown",
+      "content": "Once the server restarts, make yourself an operator using the console command `op YourUserName`. Immediately follow up by creating a staff role with limited permissions using a plugin like LuckPerms. our team's [Security Checklist](/blog/security-checklist) explains why least-privilege roles keep your project safe even if someone's account is compromised."
+    },
+    {
+      "type": "markdown",
+      "content": "Install plugins gradually. We recommend starting with:"
+    },
+    {
+      "type": "markdown",
+      "content": "1. **EssentialsX** for home teleports, spawn commands, and helpful quality-of-life tools.\n2. **CoreProtect** to roll back griefing incidents instantly.\n3. **Dynmap** or **BlueMap** if you want a live web map to showcase builds."
+    },
+    {
+      "type": "markdown",
+      "content": "After each plugin installation, restart the server and test commands using a non-op account. Document every change in a shared log so other moderators understand what is running under the hood."
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Invite Friends and Centralize Communication"
+    },
+    {
+      "type": "markdown",
+      "content": "With your foundation ready, invite players by collecting their usernames in a shared form or Discord thread. Use the panel's whitelist editor to paste the list in one go. Share the server address and remind everyone to enable two-factor authentication on their own accounts to prevent unauthorized logins."
+    },
+    {
+      "type": "markdown",
+      "content": "Communication keeps momentum high. Spin up a Discord server or Matrix room with channels for announcements, support, screenshots, and polls. Pin the rules, uptime expectations, and a link to the [Performance Tuning Checklist](/blog/performance-tuning) so players know how to report lag. Consistent updates build trust when you need to schedule maintenance or enforce moderation actions."
+    },
+    {
+      "type": "markdown",
+      "content": "## 5. Monitor Health During the First Week"
+    },
+    {
+      "type": "markdown",
+      "content": "Spend the first week watching analytics like a hawk. The our dashboard tracks CPU, RAM, disk usage, and tick rate graphs. If you notice spikes, schedule restarts during low-traffic windows and trim unused plugins. Keep a diary of changes so you can correlate adjustments with player feedback."
+    },
+    {
+      "type": "markdown",
+      "content": "For extra visibility, enable Spark profiling and run `/spark profiler --timeout 120` during peak nights. The report highlights expensive chunks and commands, making it easier to consult the [Optimization Deep Dive](/blog/minecraft-server-optimization) when you need deeper tweaks."
+    },
+    {
+      "type": "markdown",
+      "content": "## 6. Document Safety and Support Workflows"
+    },
+    {
+      "type": "markdown",
+      "content": "Even small friend groups benefit from clear safety plans. Create a shared document that outlines how to report griefing, harassment, or technical bugs. Include Discord handles for moderators, escalation timelines, and a reminder that backups exist. Link to the [Automation Runbook](/blog/automation-runbook) so staff understand how to trigger manual backups or maintenance scripts without waiting for you."
+    },
+    {
+      "type": "markdown",
+      "content": "If you accept screenshots or video evidence, store submissions in a shared drive with restricted access. Protecting personal data keeps your community compliant with privacy expectations and builds trust with parents or teachers."
+    },
+    {
+      "type": "markdown",
+      "content": "## 7. Plan Seasonal Refreshes"
+    },
+    {
+      "type": "markdown",
+      "content": "Once your first week wraps, sketch a simple roadmap. Decide how often you rotate spawn, run themed events, or introduce datapacks. Seasonal planning keeps the project exciting and gives you time to prepare hardware or plugin upgrades in advance. Coordinate with players so major updates happen after backups, our [Backup Strategy guide](/blog/backup-strategy) explains how to clone the world for testing before going live."
+    },
+    {
+      "type": "markdown",
+      "content": "Publish the roadmap in your community hub. When players know when resets or events arrive, they are less likely to panic about losing progress and more inclined to help with preparation tasks."
+    },
+    {
+      "type": "related-guides",
+      "title": "Build Skills After Your First Launch",
+      "content": "Congratulations on launching your server! Continue leveling up by exploring our team's specialist guides.\n\n- Protect player data using the [Minecraft Server Security Checklist](/blog/security-checklist).\n- Benchmark network routes using the [Latency Benchmarks for Global Players](/blog/latency-benchmarks) article."
+    }
+  ]
+}

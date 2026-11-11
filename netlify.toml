@@ -1,0 +1,28 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-XSS-Protection = "0"
+
+# Keep /archive in the repo for reference, but do not publish it.
+[[redirects]]
+  from = "/archive/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/archive"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

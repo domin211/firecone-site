@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "slug": "hosting-blueprint",
+    "title": "Community Hosting Blueprint: Keeping Free Servers Sustainable",
+    "excerpt": "Operational guardrails, donation models, and transparency habits that keep volunteer-run hosts reliable without charging players.",
+    "image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Rows of illuminated server racks in a data center",
+    "category": "Operations",
+    "published": "2024-01-05",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/hosting-blueprint",
+    "keywords": [
+      "minecraft hosting",
+      "free minecraft server",
+      "hosting sustainability",
+      "community server management"
+    ],
+    "readTime": "11 min read",
+    "description": "Build a sustainable volunteer-run hosting program with transparent guardrails, shared rituals, and funding paths that players trust.",
+    "seoTitle": "Community Hosting Blueprint: Keeping Free Servers Sustainable - Minecraft Hosting Blog",
+    "seoDescription": "Design policies, communication habits, and donation models that keep your free Minecraft hosting project reliable for the long term."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Running a free Minecraft host takes more than spare hardware. The blueprint that keeps Firecone healthy leans on transparent policies, shared rituals, and a culture of accountability. This guide captures the practices we teach new volunteers before they touch a control panel." 
+    },
+    {
+      "type": "markdown",
+      "content": "We split sustainability into three pillars: operations, funding, and community trust. Each pillar comes with lightweight checklists so even small teams can adopt the playbooks without drowning in bureaucracy."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Document Guardrails Before You Scale"
+    },
+    {
+      "type": "markdown",
+      "content": "Start with a service manual. Ours lives in Git and covers onboarding, incident roles, and exit procedures. Every volunteer knows who can reboot hardware, who can talk to players, and how to escalate a security incident."
+    },
+    {
+      "type": "markdown",
+      "content": "- Publish an org chart with primary and backup contacts.\n- Maintain a shared calendar for maintenance, launches, and time off.\n- Require two-person review on configuration or billing changes." 
+    },
+    {
+      "type": "markdown",
+      "content": "Pair written guardrails with automation. The [Automation Runbook for Minecraft Hosts](/blog/automation-runbook) turns playbooks into scripts so new volunteers inherit working muscle memory, not just documentation." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Design Fair Funding Paths"
+    },
+    {
+      "type": "markdown",
+      "content": "Free hosting is not free to operate. We publish a quarterly budget that lists hardware, bandwidth, and tooling expenses alongside donor intake. Players see how much it costs to keep the network alive and how donations or sponsorships are spent." 
+    },
+    {
+      "type": "markdown",
+      "content": "| Funding channel | How we use it | Guardrail |\n| --- | --- | --- |\n| Community donations | Covers baseline hardware and backups | Publish receipts monthly |\n| Partner slots | Funds burst capacity for events | Cap at 15% of total compute to avoid conflicts |\n| Merchandise | Pays for creative stipends and art | Rotate artists each season so everyone gets visibility |" 
+    },
+    {
+      "type": "markdown",
+      "content": "Sustainable funding also means sustainable pacing. We schedule quarterly retrospectives to decide whether we should expand, hold steady, or sunset services that no longer serve the community." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Earn Community Trust Every Week"
+    },
+    {
+      "type": "markdown",
+      "content": "Communication routines matter more than perfect uptime. Our public status page mirrors Discord announcements, changelogs, and donation summaries. Every major incident gets a postmortem with three sections: what happened, how we fixed it, and what changed so it will not happen again." 
+    },
+    {
+      "type": "markdown",
+      "content": "Invite players into the process. Monthly town halls let donors ask hard questions. Moderators present roadmap updates, and engineers demo automation improvements. We archive recordings so people who miss the live session still feel included." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Grow New Staff Responsibly"
+    },
+    {
+      "type": "markdown",
+      "content": "Volunteer burnout destroys free hosts faster than hardware failures. Firecone pairs each recruit with a mentor, rotates duties every season, and runs anonymous feedback surveys to catch warning signs early. We also maintain a skill matrix so we know when to recruit for new specialties." 
+    },
+    {
+      "type": "markdown",
+      "content": "Encourage contributors to take breaks. We celebrate sabbaticals the same way we celebrate big launches—public shout-outs and backup plans so nobody feels guilty for stepping away." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 5. Connect the Blueprint to Daily Work"
+    },
+    {
+      "type": "markdown",
+      "content": "Policies only matter if they influence real tasks. We integrate the blueprint into every checklist: change requests reference guardrail IDs, donor updates cite budget chapters, and onboarding assignments link directly to the relevant section."
+    },
+    {
+      "type": "related-guides",
+      "title": "Continue Building Resilience",
+      "content": "Pair the Hosting Blueprint with the [Automation Runbook](/blog/automation-runbook) for scripted maintenance, the [Designing a Backup Strategy](/blog/backup-strategy) guide for recovery planning, and the [Minecraft Server Security Checklist](/blog/security-checklist) to keep volunteer access tidy." 
+    }
+  ]
+}

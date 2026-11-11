@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "slug": "storage-io-tuning",
+    "title": "Storage I/O Tuning for Minecraft Servers",
+    "excerpt": "Match worlds to the right storage tier, monitor disk queues, and coordinate backups without slowing gameplay.",
+    "image": "https://images.unsplash.com/photo-1587202372775-98927cfad7ed?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Close-up of SSD drives arranged in a server tray",
+    "category": "Resilience",
+    "published": "2024-07-26",
+    "updated": "2024-07-26",
+    "canonical": "https://minecraft-hosting.blog/storage-io-tuning",
+    "keywords": [
+      "minecraft storage performance",
+      "chunk save tuning",
+      "server io optimization",
+      "infrastructure planning"
+    ],
+    "readTime": "10 min read",
+    "description": "Diagnose disk saturation, pick the right storage profile, and align backups so performance and resilience stay balanced.",
+    "seoTitle": "Storage I/O Tuning for Minecraft Servers - Minecraft Hosting Blog",
+    "seoDescription": "Reduce chunk save contention and keep world data resilient by tuning storage tiers, caching, and backup cadences."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Disk performance is the silent killer of otherwise-healthy Minecraft worlds. Slow chunk saves create rubber-banding, corrupt worlds during crashes, and make backups painfully slow. our team's hybrid storage stack lets us match workloads to SSD, NVMe, or object storage tiers depending on activity. Here's how we evaluate and tune I/O without blowing the budget."
+    },
+    {
+      "type": "markdown",
+      "content": "Combine these techniques with the failover practices in [ Designing a Backup Strategy ](/blog/backup-strategy) and the resilience mindset in [ DDoS Resilience Basics ](/blog/ddos-resilience-basics) to cover every part of the data lifecycle."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Observe I/O Pressure in Real Time"
+    },
+    {
+      "type": "markdown",
+      "content": "Start with metrics. Use `iostat` or `dstat` to capture utilization, queue depth, and wait times. When utilization exceeds 70% during peak saves, it's time to investigate."
+    },
+    {
+      "type": "markdown",
+      "content": "For shared our team nodes, we correlate these stats with the profiler traces captured in the [ Free Tier Profiling guide ](/blog/free-tier-profiling) . That helps us prove whether the disk or a runaway plugin is responsible."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Align Storage Classes to World Activity"
+    },
+    {
+      "type": "markdown",
+      "content": "Not every world needs NVMe. Assign fast volumes to survival or creative hubs with constant churn, and keep archival or event worlds on durable HDD-backed tiers. Document the mapping in your runbooks so volunteers can request changes confidently."
+    },
+    {
+      "type": "markdown",
+      "content": "| World Type | Recommended Storage | Notes |\n| --- | --- | --- |\n| Survival main | NVMe SSD | Pair with hourly snapshots and automation alerts |\n| Adventure events | Standard SSD | Clone from template, purge after season ends |\n| Archives & schematics | Object storage | Keep warm copies locally during restore drills |"
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Tune Backups and Chunk Saves Together"
+    },
+    {
+      "type": "markdown",
+      "content": "Backups can saturate disks as easily as gameplay. Stagger snapshot jobs so they run after busy hours, and compress archives on a separate worker when possible. If you use Paper's async chunk I/O, verify the write queue drains before starting a backup."
+    },
+    {
+      "type": "markdown",
+      "content": "our team's policy is to test restores monthly, just as we describe in the [Backup Strategy](/blog/backup-strategy) . During those drills we measure restore speed and adjust chunk-save intervals accordingly."
+    },
+    {
+      "type": "related-guides",
+      "title": "Keep Storage Healthy Over the Long Term",
+      "content": "Disk tuning is an ongoing practice. Use these additional our resources to maintain healthy I/O habits.\n\n- Follow the [ Plugin Lag Autopsy ](/blog/plugin-lag-autopsy) to catch plugin-induced disk thrash early.\n- Build moderator training plans with the [ Classroom Server Playbook ](/blog/classroom-server-playbook) so they can escalate storage alerts.\n- Cross-reference node health with the [ Performance Tuning Checklist ](/blog/performance-tuning) ."
+    }
+  ]
+}

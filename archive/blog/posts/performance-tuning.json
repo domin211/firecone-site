@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "slug": "performance-tuning",
+    "title": "Performance Tuning Checklist",
+    "excerpt": "Measure TPS, trim resource hogs, and coordinate restarts for smoother gameplay.",
+    "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Engineer monitoring performance charts on dual monitors",
+    "category": "Performance",
+    "published": "2024-05-31",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/performance-tuning",
+    "keywords": [
+      "minecraft performance tuning",
+      "tps monitoring",
+      "server optimization checklist",
+      "server maintenance"
+    ],
+    "readTime": "10 min read",
+    "description": "Benchmark, monitor, and iterate on your server configuration so every hosted world stays smooth even when the player list is full.",
+    "seoTitle": "Performance Tuning Checklist - Minecraft Hosting Blog",
+    "seoDescription": "Work through our team's systematic checklist to benchmark tick rates, profile plugins, and keep Minecraft servers fast under heavy load."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Performance tuning is a discipline, not a one-off fix. Our team manages classrooms, community SMPs, and live events that regularly push hardware to its limits. Our approach relies on a repeatable checklist you can run every season: measure the current state, apply targeted tweaks, communicate changes, and document results so future volunteers stay informed."
+    },
+    {
+      "type": "markdown",
+      "content": "Keep this article open alongside your monitoring dashboard. Each section references deeper guides such as the [Optimization Deep Dive](/blog/minecraft-server-optimization) when you need to dive into advanced diagnostics."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Establish a Baseline Environment"
+    },
+    {
+      "type": "markdown",
+      "content": "Begin by cloning your production world to a staging server. Disable optional plugins, reset timings data, and spawn ten test players (real or bots) to simulate load. Run `/tps` and note the numbers over a 15-minute window. Export CPU, RAM, and disk metrics from the our hosting panel so you have hard numbers for future comparisons. These baselines become invaluable when you introduce new datapacks or allow mega farms to go online."
+    },
+    {
+      "type": "markdown",
+      "content": "Record your findings in a shared document. Include seed info, plugin versions, and any anomalies spotted during the run. When a volunteer joins later, they will know whether today's 48 ms tick spikes are normal or a regression."
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Audit Server Configuration Values"
+    },
+    {
+      "type": "markdown",
+      "content": "Configuration files control how your server treats chunks, mobs, and redstone. Review `server.properties`, `spigot.yml`, and `paper-world-defaults.yml`. Our recommended starting points mirror what we run on the free tier:"
+    },
+    {
+      "type": "markdown",
+      "content": "- **view-distance: 8** for general SMPs (drop to 6 during large events to reduce chunk loading).\n- **simulation-distance: 6** to keep farms running without waking distant contraptions.\n- **spawn-limits:** Tune passive mobs to 8–10 per player and ambient mobs to 1 to limit cave noise.\n- **hopper-check: true** with a cooldown of 8 ticks to prevent storage arrays from hammering CPU."
+    },
+    {
+      "type": "markdown",
+      "content": "Apply changes incrementally and document each edit in your changelog. Pair this work with the config examples in the [Automation Runbook](/blog/automation-runbook) so maintenance scripts keep values consistent across restarts."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Profile Plugins and Farms Regularly"
+    },
+    {
+      "type": "markdown",
+      "content": "Run Spark every week during peak hours. Execute `/spark profiler --timeout 120`, wait for the report, and review the top offenders. Pair this with the `/timings paste` output to cross-reference plugin behavior. If a single plugin consumes more than 20% of the tick budget, open an investigation: can you adjust its config, throttle features, or replace it entirely?"
+    },
+    {
+      "type": "markdown",
+      "content": "For redstone and farm-heavy servers, walk through spawn chunks with F3 open and note entity counts. Encourage builders to design farms that respect caps. Sharing a “performance budget” with them fosters collaboration rather than conflict."
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Monitor Hardware and Network Signals"
+    },
+    {
+      "type": "markdown",
+      "content": "Hardware bottlenecks manifest differently. CPU spikes usually mean chunk loading or command blocks misbehaving, while disk saturation points to backups or world saves running simultaneously. Set panel alerts for 85% CPU utilization and 75% disk usage; send them to a dedicated Discord channel so the whole team sees them."
+    },
+    {
+      "type": "markdown",
+      "content": "Network health matters too. Use the playbook from [Latency Benchmarks for Global Players](/blog/latency-benchmarks) to schedule traceroutes from different regions. If a route slows down, you can alert players in advance or adjust event timing to accommodate higher ping."
+    },
+    {
+      "type": "markdown",
+      "content": "## 5. Communicate Adjustments and Gather Feedback"
+    },
+    {
+      "type": "markdown",
+      "content": "Performance work is most effective when players understand what changed. Publish a short changelog in Discord and on your website after each tuning session. Include before-and-after TPS snapshots, plugin version bumps, and clear next steps. Invite feedback in a dedicated thread so observations stay organized."
+    },
+    {
+      "type": "markdown",
+      "content": "When players feel heard, they are more likely to volunteer test cases. Teachers running classroom sessions will tell you whether command blocks behave differently; event organizers may flag scoreboard lag. These insights often catch issues before metrics do."
+    },
+    {
+      "type": "markdown",
+      "content": "## 6. Automate the Routine Maintenance"
+    },
+    {
+      "type": "markdown",
+      "content": "Manual tuning burns volunteer hours. Automate restarts, backup verifications, and alerting by adapting scripts from the [Automation Runbook](/blog/automation-runbook). Schedule low-traffic restarts every 24–36 hours, purge unused worlds weekly, and snapshot logs before wiping them. Document the cron schedule so other admins know when tasks run."
+    },
+    {
+      "type": "markdown",
+      "content": "Automation also helps with capacity planning. Track metrics in Grafana and export monthly reports. Use them to justify hardware upgrades or to show donors how resources are spent—a practice highlighted in the [Hosting Blueprint](/blog/hosting-blueprint)."
+    },
+    {
+      "type": "related-guides",
+      "title": "Keep Your Toolkit Sharp",
+      "content": "Tuning never ends, but you do not have to do it alone. Continue refining your workflow with these our resources.\n\n- Dive deeper into diagnostics with the [Minecraft Server Optimization Deep Dive](/blog/minecraft-server-optimization).\n- Protect uptime using the [Designing a Backup Strategy](/blog/backup-strategy) guide.\n- Harden your environment by following the [Minecraft Server Security Checklist](/blog/security-checklist)."
+    }
+  ]
+}

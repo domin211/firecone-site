@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "slug": "classroom-server-playbook",
+    "title": "Classroom Server Playbook: From Zero to Spawn",
+    "excerpt": "A semester-ready curriculum that helps teachers and student moderators launch and sustain a classroom server.",
+    "image": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Teacher guiding students working on laptops in a classroom",
+    "category": "Education",
+    "published": "2024-07-26",
+    "updated": "2024-07-26",
+    "canonical": "https://minecraft-hosting.blog/classroom-server-playbook",
+    "keywords": [
+      "minecraft education",
+      "classroom server curriculum",
+      "student moderators",
+      "teaching resources"
+    ],
+    "readTime": "13 min read",
+    "description": "A classroom-ready curriculum that walks educators and students through planning, launching, and maintaining a community server.",
+    "seoTitle": "Classroom Server Playbook: From Zero to Spawn - Minecraft Hosting Blog",
+    "seoDescription": "Guide teachers and student moderators through launching, governing, and sustaining a classroom Minecraft server."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Minecraft brings lessons alive, but teachers often juggle curriculum planning with the realities of server administration. This playbook packages our team's best practices into a semester-friendly arc so you can move from zero to spawn with confidence. Each module includes objectives, activities, and references to deeper technical guides."
+    },
+    {
+      "type": "markdown",
+      "content": "Pair it with the onboarding walkthrough in the [ Beginner Server Tutorial ](/blog/beginner-server-tutorial) so students understand the basics before stepping into leadership roles."
+    },
+    {
+      "type": "markdown",
+      "content": "## Module 1: Vision & Governance"
+    },
+    {
+      "type": "markdown",
+      "content": "Kick off with goal-setting. Ask students to design a server charter that covers behavior expectations, project themes, and moderation boundaries. Use snippets from the [ Hosting Blueprint ](/blog/hosting-blueprint) to illustrate how transparency keeps our team sustainable."
+    },
+    {
+      "type": "markdown",
+      "content": "Deliverables:"
+    },
+    {
+      "type": "markdown",
+      "content": "- Mission statement and world concept map.\n- Roles for student builders, moderators, and archivists.\n- Safety plan referencing the [ Minecraft Server Security Checklist ](/blog/security-checklist) ."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## Module 2: Technical Foundations"
+    },
+    {
+      "type": "markdown",
+      "content": "Guide students through provisioning their community server, installing essential plugins, and configuring backups. Encourage them to run the profiling exercises from [ Profiling Minecraft Performance on Free Tiers ](/blog/free-tier-profiling) so they understand resource constraints."
+    },
+    {
+      "type": "markdown",
+      "content": "Suggested labs include building a spawn area, configuring world protection, and practicing a backup restore using the [ Backup Strategy ](/blog/backup-strategy) drills."
+    },
+    {
+      "type": "markdown",
+      "content": "## Module 3: Operations & Community Care"
+    },
+    {
+      "type": "markdown",
+      "content": "As the semester progresses, rotate students through on-call roles. Have them respond to mock incidents, investigate plugin lag using the [ Plugin Lag Autopsy ](/blog/plugin-lag-autopsy) , and host retrospectives after each sprint."
+    },
+    {
+      "type": "markdown",
+      "content": "Close the course with a public showcase world. Students produce a changelog, performance report, and community retrospective that documents what they built and how they maintained it. This reinforces the documentation habits reviewers look for."
+    },
+    {
+      "type": "related-guides",
+      "title": "Extend the Curriculum",
+      "content": "Keep the learning loop going with additional our resources tailored to education-focused communities.\n\n- Explore resilience scenarios with [ DDoS Resilience Basics ](/blog/ddos-resilience-basics) .\n- Assign research on disk and network constraints via [ Storage I/O Tuning ](/blog/storage-io-tuning) .\n- Encourage advanced students to propose automation pull requests after studying the [ Automation Runbook ](/blog/automation-runbook) ."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "slug": "automation-runbook",
+    "title": "Automation Runbook for Minecraft Hosts",
+    "excerpt": "Turn busywork into scripts and alerting pipelines that catch issues early.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Project planning board covered with sticky notes and diagrams",
+    "category": "Operations",
+    "published": "2024-06-21",
+    "updated": "2024-07-10",
+    "canonical": "https://minecraft-hosting.blog/automation-runbook",
+    "keywords": [
+      "minecraft server automation",
+      "devops for minecraft",
+      "maintenance runbook",
+      "automation guide"
+    ],
+    "readTime": "12 min read",
+    "description": "Script repetitive Minecraft server maintenance so volunteers can focus on player experience instead of fire drills.",
+    "seoTitle": "Automation Runbook for Minecraft Hosts - Minecraft Hosting Blog",
+    "seoDescription": "Build cron jobs, health checks, and alerting workflows that keep your Minecraft infrastructure stable around the clock."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Automation lets a tiny volunteer crew support hundreds of players. This runbook compiles the scripts and checklists we trigger daily so free servers stay reliable without heroic effort." 
+    },
+    {
+      "type": "markdown",
+      "content": "We organise automation into four tracks: provisioning, backups, monitoring, and communication. Each track has a workflow diagram and a companion repository so you can fork and adapt the scripts." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Provision Servers from Templates"
+    },
+    {
+      "type": "markdown",
+      "content": "All production nodes boot from the same Ansible playbook. Templates install Java, firewall rules, panel agents, and the latest Paper build. When we need a new world, a single command provisions the VM, attaches monitoring, and posts a Discord update in the staff channel." 
+    },
+    {
+      "type": "markdown",
+      "content": "```bash\nansible-playbook provision-world.yml -e world_name=skyblock_s3 -e tier=standard\n```" 
+    },
+    {
+      "type": "markdown",
+      "content": "Provisioning jobs log to a shared folder so we can audit changes. Every run also updates a Notion table that powers the status map on our website." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Automate Backups and Validations"
+    },
+    {
+      "type": "markdown",
+      "content": "We run incremental backups every four hours and full snapshots nightly. A validation script spins up a disposable container, restores the latest snapshot, and runs `/tp` tours to ensure spawns load correctly." 
+    },
+    {
+      "type": "markdown",
+      "content": "- World archives live in object storage with 30-day retention.\n- Snapshot metadata syncs to a Google Sheet so staff can request restores.\n- Validation results ping a Discord webhook only when something fails so alerts stay actionable." 
+    },
+    {
+      "type": "markdown",
+      "content": "Pair these jobs with the [Designing a Backup Strategy](/blog/backup-strategy) article to build human-friendly recovery drills." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Monitor Health and Surface Alerts"
+    },
+    {
+      "type": "markdown",
+      "content": "Prometheus scrapes JVM stats, disk usage, and network latency every 30 seconds. Grafana dashboards summarise the data for at-a-glance reviews, while Alertmanager routes urgent notifications to on-call volunteers." 
+    },
+    {
+      "type": "markdown",
+      "content": "| Signal | Threshold | Action |
+| --- | --- | --- |
+| TPS | < 18 for 5 minutes | Trigger profiling workflow | 
+| Disk usage | > 80% | Pause backups and notify storage lead |
+| Packet loss | > 5% | Switch traffic through backup transit provider |
+" 
+    },
+    {
+      "type": "markdown",
+      "content": "Alert noise kills trust, so we tag every notification with a follow-up task in Linear. Once the issue is resolved, the automation closes the ticket and posts a summary in #ops-changelog." 
+    },
+    {
+      "type": "markdown",
+      "content": "## 4. Keep Humans in the Loop"
+    },
+    {
+      "type": "markdown",
+      "content": "Automation should never feel mysterious. The runbook ships with communication templates so every script has a matching announcement. Scheduled jobs post summaries to Discord, and incident workflows create pre-filled threads where volunteers can coordinate." 
+    },
+    {
+      "type": "markdown",
+      "content": "Automation also powers transparency. Monthly reports combine donation snapshots, uptime percentages, and roadmap progress so the community can see the impact of each script they helped build." 
+    },
+    {
+      "type": "related-guides",
+      "title": "Chain Automation with Other Playbooks",
+      "content": "Layer the Automation Runbook with the [Performance Tuning Checklist](/blog/performance-tuning), the [Minecraft Server Security Checklist](/blog/security-checklist), and the [Community Hosting Blueprint](/blog/hosting-blueprint) to cover every side of operations." 
+    }
+  ]
+}

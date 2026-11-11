@@ -1,0 +1,454 @@
+{
+  "posts": [
+    {
+      "slug": "anti-cheat-operations-guide",
+      "title": "Anti-Cheat Operations Guide for Minecraft Servers",
+      "excerpt": "Stand up ethical anti-cheat programs with telemetry pipelines, appeals workflows, and staff training to keep PvP honest.",
+      "image": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Security analysts monitoring dashboards with graphs and alerts",
+      "category": "Security",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/anti-cheat-operations-guide",
+      "keywords": [
+        "minecraft anti-cheat",
+        "pvp integrity",
+        "server security",
+        "policy"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "custom-mob-event-foundry",
+      "title": "Custom Mob Event Foundry for Minecraft Servers",
+      "excerpt": "Storyboard, script, and balance bespoke mob encounters with datapacks, MythicMobs, and community QA rituals.",
+      "image": "https://images.unsplash.com/photo-1470259078422-826894b933aa?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Fantasy battle concept art projected onto a wall during a planning session",
+      "category": "Gameplay",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/custom-mob-event-foundry",
+      "keywords": [
+        "minecraft events",
+        "mythicmobs",
+        "datapacks",
+        "custom encounters"
+      ],
+      "readTime": "13 min read"
+    },
+    {
+      "slug": "datapack-quality-bundle",
+      "title": "Datapack Quality-of-Life Bundle for Minecraft Servers",
+      "excerpt": "Assemble and maintain a curated datapack bundle with version control, performance testing, and player communication.",
+      "image": "https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Programmer reviewing code on multiple monitors with notes",
+      "category": "Quality of Life",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/datapack-quality-bundle",
+      "keywords": [
+        "minecraft datapacks",
+        "quality of life",
+        "server maintenance",
+        "bundle"
+      ],
+      "readTime": "11 min read"
+    },
+    {
+      "slug": "marketplace-storytelling",
+      "title": "Marketplace Storytelling for Minecraft Servers",
+      "excerpt": "Turn plugin-powered marketplaces into narrative hubs with marketing beats, vendor coaching, and measurable outcomes.",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Vibrant indoor market with colorful stalls and shoppers",
+      "category": "Community",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/marketplace-storytelling",
+      "keywords": [
+        "minecraft marketplace",
+        "player shops",
+        "community storytelling",
+        "marketing"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "modpack-compatibility-lab",
+      "title": "Modpack Compatibility Lab for Community Servers",
+      "excerpt": "Build cross-launcher testbeds, performance baselines, and support playbooks that let your Minecraft modpack thrive on shared infrastructure.",
+      "image": "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Technicians collaborating in a lab surrounded by monitors and cables",
+      "category": "Mods",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/modpack-compatibility-lab",
+      "keywords": [
+        "minecraft modpack",
+        "compatibility testing",
+        "launcher support",
+        "lab playbooks"
+      ],
+      "readTime": "13 min read"
+    },
+    {
+      "slug": "plugin-governance-handbook",
+      "title": "Plugin Governance Handbook for Minecraft Servers",
+      "excerpt": "Design review cadences, dependency hygiene, and communication rituals that keep your Minecraft plugin stack healthy and drama-free.",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Developers reviewing documents in a meeting room with laptops",
+      "category": "Plugins",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/plugin-governance-handbook",
+      "keywords": [
+        "minecraft plugins",
+        "governance",
+        "server management",
+        "handbook"
+      ],
+      "readTime": "14 min read"
+    },
+    {
+      "slug": "plugin-release-pipeline",
+      "title": "Plugin Release Pipeline for Minecraft Servers",
+      "excerpt": "Automate builds, testing, and staged rollouts for custom Minecraft plugins with CI/CD guardrails and community comms.",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Developers collaborating over laptops and whiteboards",
+      "category": "DevOps",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/plugin-release-pipeline",
+      "keywords": [
+        "minecraft plugin development",
+        "cicd",
+        "release management",
+        "pipeline"
+      ],
+      "readTime": "11 min read"
+    },
+    {
+      "slug": "quest-plugin-production",
+      "title": "Quest Plugin Production Pipeline",
+      "excerpt": "Map writers, scripters, and live ops into a repeatable pipeline for quest plugins like BetonQuest, Quests, and custom datapacks.",
+      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Team planning a story outline with sticky notes on a wall",
+      "category": "Plugins",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/quest-plugin-production",
+      "keywords": [
+        "minecraft quests",
+        "betonquest",
+        "story design",
+        "production pipeline"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "roleplay-systems-toolkit",
+      "title": "Roleplay Systems Toolkit for Minecraft Servers",
+      "excerpt": "Blend plugins, mods, and social rituals into a cohesive roleplay experience with respectful storytelling and reliable tooling.",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Group of people roleplaying around a table with notebooks and props",
+      "category": "Community",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/roleplay-systems-toolkit",
+      "keywords": [
+        "minecraft roleplay",
+        "server storytelling",
+        "community tools",
+        "toolkit"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "skyblock-modernization",
+      "title": "Modernizing Skyblock Servers with Plugins and Systems",
+      "excerpt": "Upgrade classic Skyblock with mission design, automation limits, and community-driven economies that feel fresh every reset.",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Stylized floating island landscape at sunset",
+      "category": "Gameplay",
+      "published": "2024-08-09",
+      "updated": "2024-08-09",
+      "canonical": "https://minecraft-hosting.blog/skyblock-modernization",
+      "keywords": [
+        "minecraft skyblock",
+        "bentobox",
+        "server resets",
+        "modernization"
+      ],
+      "readTime": "11 min read"
+    },
+    {
+      "slug": "community-economy-design",
+      "title": "Designing a Player-Run Economy for Minecraft Servers",
+      "excerpt": "Blueprints, analytics, and conflict-resolution rituals that help Minecraft staff launch thriving player economies without burning out.",
+      "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Minecraft-inspired market stalls built with wood and lanterns",
+      "category": "Community",
+      "published": "2024-08-02",
+      "updated": "2024-08-02",
+      "canonical": "https://minecraft-hosting.blog/community-economy-design",
+      "keywords": [
+        "minecraft economy",
+        "player shops",
+        "server governance",
+        "community guide"
+      ],
+      "readTime": "14 min read"
+    },
+    {
+      "slug": "seasonal-event-command-center",
+      "title": "Seasonal Event Command Center",
+      "excerpt": "Build a command center for Minecraft seasonal events that keeps staff organized, players thrilled, and incidents resolved within minutes.",
+      "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Control room with monitors tracking live events",
+      "category": "Operations",
+      "published": "2024-08-02",
+      "updated": "2024-08-02",
+      "canonical": "https://minecraft-hosting.blog/seasonal-event-command-center",
+      "keywords": [
+        "minecraft events",
+        "server operations",
+        "community management",
+        "seasonal planning"
+      ],
+      "readTime": "13 min read"
+    },
+    {
+      "slug": "classroom-server-playbook",
+      "title": "Classroom Server Playbook: From Zero to Spawn",
+      "excerpt": "A semester-ready curriculum that helps teachers and student moderators launch and sustain a classroom server.",
+      "image": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Teacher guiding students working on laptops in a classroom",
+      "category": "Education",
+      "published": "2024-07-26",
+      "updated": "2024-07-26",
+      "canonical": "https://minecraft-hosting.blog/classroom-server-playbook",
+      "keywords": [
+        "minecraft education",
+        "classroom server curriculum",
+        "student moderators",
+        "teaching resources"
+      ],
+      "readTime": "13 min read"
+    },
+    {
+      "slug": "ddos-resilience-basics",
+      "title": "DDoS Resilience Basics for Hobby Servers",
+      "excerpt": "Layer filtering, monitoring, and communication so your Minecraft community stays online during attacks.",
+      "image": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Network cables plugged into a secure server rack",
+      "category": "Security",
+      "published": "2024-07-26",
+      "updated": "2024-07-26",
+      "canonical": "https://minecraft-hosting.blog/ddos-resilience-basics",
+      "keywords": [
+        "minecraft ddos protection",
+        "hobby server security",
+        "network resilience",
+        "mitigation strategies"
+      ],
+      "readTime": "9 min read"
+    },
+    {
+      "slug": "free-tier-profiling",
+      "title": "Profiling Minecraft Performance on Free Tiers",
+      "excerpt": "Collect meaningful metrics on free hosting tiers so you can right-size plugins, plan upgrades, and explain trade-offs to your staff.",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Developer analyzing charts on a laptop in a dark room",
+      "category": "Performance",
+      "published": "2024-07-26",
+      "updated": "2024-07-26",
+      "canonical": "https://minecraft-hosting.blog/free-tier-profiling",
+      "keywords": [
+        "minecraft profiling",
+        "free tier hosting",
+        "server performance metrics",
+        "observability"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "plugin-lag-autopsy",
+      "title": "Plugin-Induced Tick Lag Autopsy",
+      "excerpt": "Recreate lag spikes, collect profiler traces, and ship policy fixes that keep your plugin stack healthy.",
+      "image": "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Technician reviewing server traces on multiple monitors",
+      "category": "Performance",
+      "published": "2024-07-26",
+      "updated": "2024-07-26",
+      "canonical": "https://minecraft-hosting.blog/plugin-lag-autopsy",
+      "keywords": [
+        "minecraft plugins",
+        "tick lag investigation",
+        "spark profiler",
+        "performance analysis"
+      ],
+      "readTime": "11 min read"
+    },
+    {
+      "slug": "storage-io-tuning",
+      "title": "Storage I/O Tuning for Minecraft Servers",
+      "excerpt": "Match worlds to the right storage tier, monitor disk queues, and coordinate backups without slowing gameplay.",
+      "image": "https://images.unsplash.com/photo-1587202372775-98927cfad7ed?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Close-up of SSD drives arranged in a server tray",
+      "category": "Resilience",
+      "published": "2024-07-26",
+      "updated": "2024-07-26",
+      "canonical": "https://minecraft-hosting.blog/storage-io-tuning",
+      "keywords": [
+        "minecraft storage performance",
+        "chunk save tuning",
+        "server io optimization",
+        "infrastructure planning"
+      ],
+      "readTime": "10 min read"
+    },
+    {
+      "slug": "backup-strategy",
+      "title": "Designing a Backup Strategy",
+      "excerpt": "Snapshot cadence, restore drills, and retention policies to safeguard your worlds.",
+      "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "External hard drives stacked beside a laptop",
+      "category": "Resilience",
+      "published": "2024-07-19",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/backup-strategy",
+      "keywords": [
+        "minecraft backup strategy",
+        "world backups",
+        "disaster recovery",
+        "resilience planning"
+      ],
+      "readTime": "9 min read"
+    },
+    {
+      "slug": "security-checklist",
+      "title": "Minecraft Server Security Checklist",
+      "excerpt": "Permission hygiene, monitoring, and contingency plans to keep griefers out.",
+      "image": "https://images.unsplash.com/photo-1517249361621-f11084eb8b0b?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Close-up of a padlock securing a server cabinet",
+      "category": "Security",
+      "published": "2024-07-05",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/security-checklist",
+      "keywords": [
+        "minecraft server security",
+        "griefing prevention",
+        "security checklist",
+        "server safety"
+      ],
+      "readTime": "11 min read"
+    },
+    {
+      "slug": "automation-runbook",
+      "title": "Automation Runbook for Minecraft Hosts",
+      "excerpt": "Turn busywork into scripts and alerting pipelines that catch issues early.",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Project planning board covered with sticky notes and diagrams",
+      "category": "Operations",
+      "published": "2024-06-21",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/automation-runbook",
+      "keywords": [
+        "minecraft server automation",
+        "devops for minecraft",
+        "maintenance runbook",
+        "automation guide"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "latency-benchmarks",
+      "title": "Latency Benchmarks for Global Players",
+      "excerpt": "Collect route data and publish expectations so global players feel in sync.",
+      "image": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Colorful world map pinned with travel markers",
+      "category": "Performance",
+      "published": "2024-06-07",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/latency-benchmarks",
+      "keywords": [
+        "minecraft latency",
+        "network benchmarks",
+        "global server hosting",
+        "connectivity planning"
+      ],
+      "readTime": "9 min read"
+    },
+    {
+      "slug": "performance-tuning",
+      "title": "Performance Tuning Checklist",
+      "excerpt": "Measure TPS, trim resource hogs, and coordinate restarts for smoother gameplay.",
+      "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Engineer monitoring performance charts on dual monitors",
+      "category": "Performance",
+      "published": "2024-05-31",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/performance-tuning",
+      "keywords": [
+        "minecraft performance tuning",
+        "tps monitoring",
+        "server optimization checklist",
+        "server maintenance"
+      ],
+      "readTime": "10 min read"
+    },
+    {
+      "slug": "beginner-server-tutorial",
+      "title": "Beginner Tutorial: Launching Your First Minecraft Server",
+      "excerpt": "A friendly walk-through from account creation to world backups so your first community server starts strong.",
+      "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Person typing on a laptop with code on screen",
+      "category": "Getting Started",
+      "published": "2024-02-02",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/beginner-server-tutorial",
+      "keywords": [
+        "beginner minecraft server",
+        "minecraft tutorial",
+        "server setup guide",
+        "minecraft hosting tips"
+      ],
+      "readTime": "13 min read"
+    },
+    {
+      "slug": "minecraft-server-optimization",
+      "title": "Minecraft Server Optimization Deep Dive",
+      "excerpt": "Step-by-step diagnostics for taming lag, right-sizing hardware, and coordinating staff fixes across time zones.",
+      "image": "https://images.unsplash.com/photo-1580894906472-6af1d4acdf86?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Technician adjusting cables on a server rack",
+      "category": "Performance",
+      "published": "2024-01-19",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/minecraft-server-optimization",
+      "keywords": [
+        "minecraft optimization",
+        "tps tuning",
+        "server performance guide",
+        "lag reduction"
+      ],
+      "readTime": "12 min read"
+    },
+    {
+      "slug": "hosting-blueprint",
+      "title": "Community Hosting Blueprint: Keeping Free Servers Sustainable",
+      "excerpt": "Operational guardrails, donation models, and transparency habits that keep volunteer-run hosts reliable without charging players.",
+      "image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1200&q=80",
+      "imageAlt": "Rows of illuminated server racks in a data center",
+      "category": "Operations",
+      "published": "2024-01-05",
+      "updated": "2024-07-10",
+      "canonical": "https://minecraft-hosting.blog/hosting-blueprint",
+      "keywords": [
+        "minecraft hosting",
+        "free minecraft server",
+        "hosting sustainability",
+        "community server management"
+      ],
+      "readTime": "11 min read"
+    }
+  ]
+}

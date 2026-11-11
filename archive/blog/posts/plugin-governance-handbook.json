@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "slug": "plugin-governance-handbook",
+    "title": "Plugin Governance Handbook for Minecraft Servers",
+    "excerpt": "Design review cadences, dependency hygiene, and communication rituals that keep your Minecraft plugin stack healthy and drama-free.",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Developers reviewing documents in a meeting room with laptops",
+    "category": "Plugins",
+    "published": "2024-08-09",
+    "updated": "2024-08-09",
+    "canonical": "https://minecraft-hosting.blog/plugin-governance-handbook",
+    "keywords": [
+      "minecraft plugins",
+      "governance",
+      "server management",
+      "handbook"
+    ],
+    "readTime": "14 min read",
+    "description": "Design review cadences, dependency hygiene, and communication rituals that keep your Minecraft plugin stack healthy and drama-free.",
+    "seoTitle": "Plugin Governance Handbook for Minecraft Servers - Minecraft Hosting Blog",
+    "seoDescription": "Design review cadences, dependency hygiene, and communication rituals that keep your Minecraft plugin stack healthy and drama-free."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "community server owners treat plugin management like running a software cooperative. Every jar you drop into the `plugins` folder represents expectations from builders, moderators, lore writers, and financial stewards. Without structure, that goodwill erodes when a surprise update breaks warps or an unvetted dependency introduces a critical exploit. This handbook documents the governance rituals we use to steer plugin strategy with the same care we apply to infrastructure. Use it to frame conversations with staff, recruit contributors, and protect uptime when the mod ecosystem shifts overnight."
+    },
+    {
+      "type": "markdown",
+      "content": "Start by mapping the lifecycle of a plugin in your environment. Ours begins with a “pitch” ticket that outlines the gameplay problem being solved, alternatives considered, and maintenance expectations. Staff vote asynchronously in Notion, tagging the proposal with risk labels such as _core gameplay_, _economic stability_, or _quality-of-life_. Once approved, we appoint a sponsor responsible for shepherding the plugin through testing and launch. Sponsors track compatibility with Paper builds, dependency chains, and configuration diffs so knowledge survives staff turnover. This small amount of paperwork keeps plugins accountable to the community goals you set at season kickoff."
+    },
+    {
+      "type": "markdown",
+      "content": "## Run a Standing Plugin Review Cadence"
+    },
+    {
+      "type": "markdown",
+      "content": "Weekly governance calls may feel excessive, yet they prevent firefighting sessions later. our team schedules a one-hour plugin review every Monday where leads from moderation, economy, events, and creative teams share telemetry. We surface profiler traces from Spark, queue lengths from `/timings`, and incident tickets linked to plugin behavior. Each plugin receives a color status: green for stable, yellow for watchlist, red for intervention. Sponsors prepare two-slide updates summarizing roadmap changes, outstanding pull requests, and upstream maintainer health so there are no surprises when Mojang ships a protocol change."
+    },
+    {
+      "type": "markdown",
+      "content": "The cadence also functions as a feedback loop for players. Ahead of each review we solicit qualitative input via a Discord thread tagged #plugin-observatory. Shopkeepers report on QuickShop quirks, PvP captains weigh in on Duel claims, and roleplay writers mention lore conflicts. We archive this feedback inside a shared Notion board, linking it to the plugin ticket so sponsors can trace decisions later. Transparency builds trust: even when we decline a request, players see the documentation and understand the trade-off between feature velocity and server stability."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## Protect Dependencies Like Production Code"
+    },
+    {
+      "type": "markdown",
+      "content": "Hidden transitive dependencies cause the most painful regressions. Our governance policy treats every dependency as production code that must be inventoried, scanned, and version-locked. We maintain a `plugins.lock` manifest stored in Git alongside configuration snippets. When Paper or Purpur release updates, a CI job diffs the manifest against upstream version feeds and opens an issue describing required retesting. The manifest also records SHA hashes so we can detect tampered jars from unofficial mirrors. Nothing lands on the server until the hash passes."
+    },
+    {
+      "type": "markdown",
+      "content": "Security reviews extend to permission nodes and API scopes. Sponsors compile a matrix showing which plugins issue `/op`-level commands, interact with filesystem paths, or connect to external APIs. This matrix feeds into the incident response plan documented in the [ Minecraft Server Security Checklist ](/blog/security-checklist) so on-call moderators know which systems to isolate if a plugin misbehaves. Quarterly, we run tabletop exercises simulating a compromised dependency. Staff practice revoking tokens, rolling back to clean builds, and communicating with players. By rehearsing in calm times, we reduce panic when a real exploit hits."
+    },
+    {
+      "type": "markdown",
+      "content": "## Stage Rollouts with Player-Centric Testing"
+    },
+    {
+      "type": "markdown",
+      "content": "Governance fails if testing excludes the people affected. We operate a staging cluster mirroring live economies, region portals, and claim data. Sponsors schedule weekend “playtests” where selected players run scripted scenarios: auction house stress tests, PvP tournaments, or redstone workshops. Observers capture metrics via Plan Player Analytics and watch Discord sentiment in real time. If a plugin introduces friction—say, a teleport cooldown that slows event logistics—we document the impact and capture alternatives before pushing live. Players appreciate being invited into the process and often volunteer to help triage edge cases we never considered."
+    },
+    {
+      "type": "markdown",
+      "content": "After each test, we publish a changelog summarizing fixes, known issues, and the go/no-go decision. The changelog lives in a public Git repository so anyone can audit history. When a rollout succeeds, sponsors tag the release in the manifest and prepare a “day two” checklist covering monitoring alerts, rollback scripts, and staff talking points. If we abort, the documentation records why and what’s needed for another attempt. This disciplined loop keeps morale high; staff know that a failed rollout is data, not defeat."
+    },
+    {
+      "type": "markdown",
+      "content": "## Invest in Sponsor Succession and Knowledge Sharing"
+    },
+    {
+      "type": "markdown",
+      "content": "Plugin governance is only sustainable when knowledge outlives individuals. our team maintains a living sponsor handbook with onboarding checklists, configuration primers, and communication templates. New sponsors shadow a veteran through an entire release cycle before assuming responsibility. They learn how to coordinate with the [ Automation Runbook ](/blog/automation-runbook) for scheduled tasks, how to file tickets with upstream maintainers, and how to write a transparent postmortem if an incident occurs. We also pair sponsors with apprentices from the player community, creating a talent pipeline that keeps the roster fresh."
+    },
+    {
+      "type": "markdown",
+      "content": "Twice per year we host a virtual “Plugin Conclave” where sponsors present lightning talks. Topics include rewriting legacy Skript automations, migrating to Folia for regionized tick handling, or launching a beta program for datapacks. We record sessions and timestamp them for quick search. These gatherings turn governance from a chore into a celebration of player creativity. Staff leave inspired to refine documentation, automate chores, and invite more community members into stewardship roles."
+    },
+    {
+      "type": "related-guides",
+      "title": "Continue Strengthening Your Stack",
+      "content": "Pair this handbook with performance diagnostics from the [ Plugin-Induced Tick Lag Autopsy ](/blog/plugin-lag-autopsy) to catch regressions early, and consult the [ Performance Tuning Checklist ](/blog/performance-tuning) for routine maintenance rituals. Together, they form a resilient operating model for any Minecraft server chasing ambitious plugin experiences."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "slug": "plugin-lag-autopsy",
+    "title": "Plugin-Induced Tick Lag Autopsy",
+    "excerpt": "Recreate lag spikes, collect profiler traces, and ship policy fixes that keep your plugin stack healthy.",
+    "image": "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Technician reviewing server traces on multiple monitors",
+    "category": "Performance",
+    "published": "2024-07-26",
+    "updated": "2024-07-26",
+    "canonical": "https://minecraft-hosting.blog/plugin-lag-autopsy",
+    "keywords": [
+      "minecraft plugins",
+      "tick lag investigation",
+      "spark profiler",
+      "performance analysis"
+    ],
+    "readTime": "11 min read",
+    "description": "Reverse-engineer the conditions that tank your TPS, then refactor configs, code, or expectations so players stay smooth.",
+    "seoTitle": "Plugin-Induced Tick Lag Autopsy - Minecraft Hosting Blog",
+    "seoDescription": "Diagnose and eliminate plugin-induced tick lag with reproducible experiments, profiler traces, and remediation playbooks."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "When a server stutters, plugins are often the culprit—but blaming them broadly rarely fixes the problem. our team's reliability team treats lag like a forensic investigation. We gather evidence, isolate suspects, recreate the crime, and implement long-term controls so the issue stays resolved. This autopsy outlines the toolkit we apply when the community raises the red lag banner."
+    },
+    {
+      "type": "markdown",
+      "content": "Pair these steps with the profiling routine documented in [ Profiling Minecraft Performance on Free Tiers ](/blog/free-tier-profiling) to build a complete picture of your environment."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Isolate the Regression Window"
+    },
+    {
+      "type": "markdown",
+      "content": "Start with the timeline. Ask players when the lag began, then match that window to deployment logs in the [ Automation Runbook ](/blog/automation-runbook) . Identify plugin updates, configuration changes, or new command blocks that shipped around the same time."
+    },
+    {
+      "type": "markdown",
+      "content": "Next, capture a timings report from both a healthy and degraded period. Export them to a diff tool and note which plugin tasks climbed in execution time or count. This delta becomes your primary lead."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Reproduce the Lag in a Controlled Sandbox"
+    },
+    {
+      "type": "markdown",
+      "content": "Spin up a staging server or a temporary world clone. Load only the suspect plugins and run scripted scenarios that mirror player behavior—AFK fishing, hopper lines, custom mobs, or redstone clocks. Keep the console open with `/spark profiler --timeout 90` running to gather stack samples."
+    },
+    {
+      "type": "markdown",
+      "content": "When you observe a spike, correlate it with plugin logs. Many modern plugins emit debug output when timings exceed a threshold. Capture those logs in your evidence locker alongside the profiler flamegraphs so other admins can inspect them asynchronously."
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Decide on Patch, Config, or Policy Changes"
+    },
+    {
+      "type": "markdown",
+      "content": "Once the root cause is clear, pick a remediation path. Use the matrix below to weigh the options. Always communicate the outcome with context so players understand the trade-offs."
+    },
+    {
+      "type": "markdown",
+      "content": "| Scenario | Decision | Long-term guardrail |\n| --- | --- | --- |\n| Async chunk claims overloading MySQL | Tune thread pool, add connection pooling plugin | Monitor MySQL saturation in Minecraft Server Optimization Deep Dive |\n| Custom mobs triggering expensive pathfinding | Disable feature on survival worlds, keep on events server | Document policy in the Classroom Server Playbook |"
+    },
+    {
+      "type": "related-guides",
+      "title": "Build a Sustainable Plugin Lifecycle",
+      "content": "Lag prevention relies on habits, not heroics. Combine this autopsy with other our team playbooks to keep the stack predictable.\n\n- Review new plugin requests against the [ Hosting Blueprint ](/blog/hosting-blueprint) risk criteria.\n- Practice backup restores after plugin updates using [ Designing a Backup Strategy ](/blog/backup-strategy) .\n- Keep your moderation team ready with the [ Minecraft Server Security Checklist ](/blog/security-checklist) ."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "slug": "ddos-resilience-basics",
+    "title": "DDoS Resilience Basics for Hobby Servers",
+    "excerpt": "Layer filtering, monitoring, and communication so your Minecraft community stays online during attacks.",
+    "image": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Network cables plugged into a secure server rack",
+    "category": "Security",
+    "published": "2024-07-26",
+    "updated": "2024-07-26",
+    "canonical": "https://minecraft-hosting.blog/ddos-resilience-basics",
+    "keywords": [
+      "minecraft ddos protection",
+      "hobby server security",
+      "network resilience",
+      "mitigation strategies"
+    ],
+    "readTime": "9 min read",
+    "description": "Adopt pragmatic safeguards—network filtering, incident drills, and transparent communication—to keep players online when attackers knock.",
+    "seoTitle": "DDoS Resilience Basics for Hobby Minecraft Servers - Minecraft Hosting Blog",
+    "seoDescription": "Harden your Minecraft server against denial-of-service attacks with layered defenses, monitoring, and community runbooks."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "DDoS attacks can take a community offline in minutes, especially when you're operating on volunteer time and limited budget. At our team we build resilience through layers: upstream filtering, smart rate limits, rapid communication, and a cool-headed incident plan. This primer shows how you can apply the same strategy to hobby or classroom servers without enterprise overhead."
+    },
+    {
+      "type": "markdown",
+      "content": "Resilience isn't a single feature. It's a stack of practices that includes the [ Minecraft Server Security Checklist ](/blog/security-checklist) and the automation habits described in the [ Automation Runbook ](/blog/automation-runbook) ."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Layer Filtering from Upstream to In-Game"
+    },
+    {
+      "type": "markdown",
+      "content": "Work with your hosting provider to enable upstream scrubbing or connect through a proxy network. our team relies on regional scrubbing centers that block volumetric floods before they reach our nodes. On the server side, configure Paper's connection throttle and install lightweight proxy-firewall plugins that challenge suspicious clients."
+    },
+    {
+      "type": "markdown",
+      "content": "Document these settings alongside your standard operating procedures so any volunteer can verify they're active during an incident."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Establish Monitoring and Escalation Paths"
+    },
+    {
+      "type": "markdown",
+      "content": "Enable connection metrics in your panel and subscribe to alerts when concurrent sessions spike beyond historical norms. Pair those alerts with Discord webhooks so your moderation team is notified instantly. our team links these alerts to our [ Hosting Blueprint ](/blog/hosting-blueprint) roles so on-call volunteers know when to engage upstream providers."
+    },
+    {
+      "type": "markdown",
+      "content": "Practice the escalation procedure quarterly. Run tabletop exercises where you walk through an attack scenario, identify the communication channels used, and confirm contact details are up to date."
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Communicate Transparently With Players"
+    },
+    {
+      "type": "markdown",
+      "content": "During an attack, players primarily want to know that you are aware of the issue and working on it. Publish a status update, pin a Discord announcement, and direct players to a read-only information source. The [ Classroom Server Playbook ](/blog/classroom-server-playbook) includes templates that teachers and student moderators can adapt for emergency messaging."
+    },
+    {
+      "type": "markdown",
+      "content": "After the incident, debrief. Capture what happened, how long mitigation took, and what guardrails you'll add. Share the summary with your community—transparency builds trust."
+    },
+    {
+      "type": "related-guides",
+      "title": "Strengthen Defense in Depth",
+      "content": "DDoS resilience intersects with every operational playbook. Continue hardening your stack with these resources.\n\n- Align storage and backup policies using [ Storage I/O Tuning ](/blog/storage-io-tuning) .\n- Measure performance headroom with [ Free Tier Profiling ](/blog/free-tier-profiling) .\n- Keep plugins optimized via the [ Plugin Lag Autopsy ](/blog/plugin-lag-autopsy) ."
+    }
+  ]
+}

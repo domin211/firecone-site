@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "slug": "free-tier-profiling",
+    "title": "Profiling Minecraft Performance on Free Tiers",
+    "excerpt": "Collect meaningful metrics on free hosting tiers so you can right-size plugins, plan upgrades, and explain trade-offs to your staff.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Developer analyzing charts on a laptop in a dark room",
+    "category": "Performance",
+    "published": "2024-07-26",
+    "updated": "2024-07-26",
+    "canonical": "https://minecraft-hosting.blog/free-tier-profiling",
+    "keywords": [
+      "minecraft profiling",
+      "free tier hosting",
+      "server performance metrics",
+      "observability"
+    ],
+    "readTime": "12 min read",
+    "description": "Collect actionable metrics on the free tier so you can right-size plugins, track contention, and plan upgrades with evidence.",
+    "seoTitle": "Profiling Minecraft Performance on Free Tiers - Minecraft Hosting Blog",
+    "seoDescription": "Instrument your free-tier Minecraft server to uncover CPU, memory, and network bottlenecks before they spill over to players."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "Free-tier servers are ideal for prototyping adventures and teaching the fundamentals of admin work, but they come with strict budgets. Profiling gives you the data to treat those limits as design constraints instead of guesswork. At our team, we pair lightweight JVM profilers with in-game telemetry so volunteers can verify when it's time to graduate into a paid plan or carve away inefficiencies outlined in the [ Performance Tuning Checklist ](/blog/performance-tuning) ."
+    },
+    {
+      "type": "markdown",
+      "content": "The workflow below mirrors how our internal reliability guild evaluates community worlds during onboarding. Use it to gather baselines, experiment with load, and communicate results to the rest of your staff."
+    },
+    {
+      "type": "markdown",
+      "content": "## 1. Capture Core Metrics Without Overhead"
+    },
+    {
+      "type": "markdown",
+      "content": "Start with the essentials: tick time, JVM heap usage, and disk I/O. We recommend enabling the built-in timings report every 10 minutes and shipping it to object storage for later review. Complement that with [ latency snapshots ](/blog/latency-benchmarks) so you see how global players experience the world."
+    },
+    {
+      "type": "markdown",
+      "content": "- Enable Spark or Aikar's timings in sampling mode and disable verbose stack traces to keep CPU usage minimal.\n- Record heap usage via `/spark heap` during peak sessions.\n- Track disk queue length with `iostat -x 1 5` inside the container."
+    },
+    {
+      "type": "markdown",
+      "content": "Archive these metrics in the same place you store world backups referenced in [ Designing a Backup Strategy ](/blog/backup-strategy) . Keeping a single evidence locker makes audits much easier."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## 2. Reproduce Player Load in Controlled Windows"
+    },
+    {
+      "type": "markdown",
+      "content": "Once baselines are established, schedule load tests. Invite a few moderators to join simultaneously with simulated redstone contraptions, mob farms, and chunk loading patterns pulled from your busiest plots. The goal is to detect thresholds when TPS dips below 19.5 or garbage collection spikes."
+    },
+    {
+      "type": "markdown",
+      "content": "our team free-tier nodes run on shared CPU, so coordinate experiments in off-peak windows. Our community calendar, detailed in the [ Automation Runbook ](/blog/automation-runbook) , helps volunteers avoid stepping on each other."
+    },
+    {
+      "type": "markdown",
+      "content": "## 3. Present Findings With Upgrade Paths"
+    },
+    {
+      "type": "markdown",
+      "content": "Profiling is only valuable if it changes behavior. Summarize your evidence in a shared doc that highlights bottlenecks, the players affected, and the remediation options. Offer at least one optimization that keeps the server on the free tier and one that justifies an upgrade."
+    },
+    {
+      "type": "markdown",
+      "content": "| Bottleneck | Impact | Recommendation |\n| --- | --- | --- |\n| Tick spikes when 6+ players fly | TPS drops to 18.7, chat lag complaints | Limit Elytra speed with Carpet; budget for paid CPU burst credits |\n| Hopper arrays hitting disk | Chunk saves saturate I/O queue | Adopt chunk loader throttles from Storage I/O Tuning |"
+    },
+    {
+      "type": "markdown",
+      "content": "Share takeaways in your staff meeting and celebrate the learning. Profiling is a team sport, and surfacing results builds the expertise Google reviewers look for."
+    },
+    {
+      "type": "related-guides",
+      "title": "Continue Building Observability Muscles",
+      "content": "Pair profiling with other operational rituals so your free-tier experiments translate into production-ready worlds later.\n\n- Map out recovery objectives with [ Designing a Backup Strategy ](/blog/backup-strategy) .\n- Keep plugins honest using the [ Plugin Lag Autopsy ](/blog/plugin-lag-autopsy) field notes.\n- Educate moderators through the [ Classroom Server Playbook ](/blog/classroom-server-playbook) when you mentor student admins."
+    }
+  ]
+}

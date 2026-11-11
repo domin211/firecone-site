@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "slug": "plugin-release-pipeline",
+    "title": "Plugin Release Pipeline for Minecraft Servers",
+    "excerpt": "Automate builds, testing, and staged rollouts for custom Minecraft plugins with CI/CD guardrails and community comms.",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Developers collaborating over laptops and whiteboards",
+    "category": "DevOps",
+    "published": "2024-08-09",
+    "updated": "2024-08-09",
+    "canonical": "https://minecraft-hosting.blog/plugin-release-pipeline",
+    "keywords": [
+      "minecraft plugin development",
+      "cicd",
+      "release management",
+      "pipeline"
+    ],
+    "readTime": "11 min read",
+    "description": "Automate builds, testing, and staged rollouts for custom Minecraft plugins with CI/CD guardrails and community comms.",
+    "seoTitle": "Plugin Release Pipeline for Minecraft Servers - Minecraft Hosting Blog",
+    "seoDescription": "Automate builds, testing, and staged rollouts for custom Minecraft plugins with CI/CD guardrails and community comms."
+  },
+  "content": [
+    {
+      "type": "markdown",
+      "content": "our team develops custom plugins to bridge gaps left by public projects. Shipping those plugins requires discipline—otherwise a mistyped config or untested dependency can tank TPS. Our release pipeline borrows best practices from software engineering while staying approachable for volunteer developers. Follow these steps to keep your plugin launches smooth and transparent."
+    },
+    {
+      "type": "markdown",
+      "content": "We structure each plugin repository with clear boundaries: `/core` for logic, `/api` for integration hooks, and `/config` for default YAML templates. Documentation lives in `/docs` with Markdown covering setup, commands, and metrics. Contributors submit pull requests referencing JIRA tickets that describe the player problem being solved. This structure makes it easy for reviewers to understand intent and trace history months later."
+    },
+    {
+      "type": "markdown",
+      "content": "## Automate Builds and Static Analysis"
+    },
+    {
+      "type": "markdown",
+      "content": "Every repository ships with a GitHub Actions workflow. The pipeline compiles against Paper and Folia APIs, runs unit tests, and executes static analysis via SpotBugs and Checkstyle. We also integrate the [ Plugin Governance Handbook ](/blog/plugin-governance-handbook) manifest to ensure dependencies remain pinned. Failed checks block merges, preventing rushed fixes from sneaking in."
+    },
+    {
+      "type": "markdown",
+      "content": "Build artifacts publish to an internal Maven repository with semantic versioning. Release candidates include changelog drafts generated from conventional commit messages. Once approved, the workflow signs jars with a server-side key so staff can verify integrity before deployment."
+    },
+    {
+      "type": "ad",
+      "position": "in-content"
+    },
+    {
+      "type": "markdown",
+      "content": "## Stage Rollouts with Canary Servers"
+    },
+    {
+      "type": "markdown",
+      "content": "We maintain a trio of canary servers mirroring production roles: survival, minigames, and creative. Release candidates auto-deploy overnight, and monitoring dashboards compare metrics against control groups. If timings or player sentiment dip, the workflow halts promotion and opens an incident ticket."
+    },
+    {
+      "type": "markdown",
+      "content": "Canary results feed into a release council meeting that includes moderators, builders, and economy leads. Together we decide whether to ship, iterate, or roll back. Meeting notes live alongside the [ Automation Runbook ](/blog/automation-runbook) tasks so everyone knows the rollout steps and contingency plans."
+    },
+    {
+      "type": "markdown",
+      "content": "## Coordinate Player Communication"
+    },
+    {
+      "type": "markdown",
+      "content": "A release isn’t done until players understand the change. We draft announcement templates covering new features, migration steps, and known risks. Copywriters collaborate with moderators to translate technical language into accessible guidance. The [ Seasonal Event Command Center ](/blog/seasonal-event-command-center) team schedules Discord stages, forum posts, and in-game broadcasts so messaging lands simultaneously."
+    },
+    {
+      "type": "markdown",
+      "content": "Players receive beta opt-in instructions and links to bug report forms. After launch, we track support tickets, Discord sentiment, and uptime dashboards. If metrics exceed thresholds, we trigger an on-call rotation to investigate quickly. Transparency turns potential frustration into collaborative problem-solving."
+    },
+    {
+      "type": "markdown",
+      "content": "## Close the Loop with Post-Release Reviews"
+    },
+    {
+      "type": "markdown",
+      "content": "Within 72 hours of release, we hold a retrospective covering what went well, what failed, and what to automate next. We document improvements in a living playbook, update runbooks, and refresh onboarding materials for new contributors. Lessons learned flow into future sprints."
+    },
+    {
+      "type": "markdown",
+      "content": "Metrics also feed back into product planning. If a new plugin reduces moderator workload, we quantify saved hours and reinvest them into creative projects. If bugs slipped through, we adjust test coverage or add new staging scenarios. The pipeline stays healthy because it evolves with our community’s needs."
+    },
+    {
+      "type": "related-guides",
+      "title": "Ship with Confidence",
+      "content": "Combine the Plugin Release Pipeline with insights from the [ Plugin-Induced Tick Lag Autopsy ](/blog/plugin-lag-autopsy) to detect regressions, and pair it with the [ Security Checklist ](/blog/security-checklist) to protect deployment keys. Smooth releases keep players happy and staff energized."
+    }
+  ]
+}
