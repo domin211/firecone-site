@@ -1,24 +1,32 @@
+@font-face{font-family:"Unbounded";src:url(/fonts/unbounded.woff2) format("woff2");font-weight:200 900;font-display:swap}
+@font-face{font-family:"Rubik";src:url(/fonts/rubik.woff2) format("woff2");font-weight:300 900;font-display:swap}
 *{box-sizing:border-box;margin:0}
-html{background:#0e0e0f}
-body{min-height:100vh;display:flex;flex-direction:column;background:#0e0e0f;color:#ececec;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem clamp(1.25rem,5vw,3.5rem);border-bottom:1px solid #1f1f22}
-.brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem;letter-spacing:.01em}
-.brand img{border-radius:8px}
-nav{display:flex;gap:1.75rem}
-nav a{color:#8b8b92;text-decoration:none;font-size:.95rem}
-nav a:hover{color:#fff}
-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:3rem clamp(1.25rem,5vw,3.5rem);max-width:1100px;width:100%;margin:0 auto}
-.kicker{color:#f97316;font-weight:600;font-size:1rem;margin-bottom:1rem}
-h1{font-size:clamp(3.2rem,15vw,10rem);font-weight:800;letter-spacing:-.045em;line-height:.95;color:#fff;font-variant-numeric:tabular-nums}
-.timer{display:flex;margin:3rem 0 3rem;border-top:1px solid #26262a;border-bottom:1px solid #26262a}
-.timer div{flex:1;padding:1.25rem 0 1.1rem;border-left:1px solid #26262a;padding-left:clamp(.75rem,2.5vw,1.75rem)}
-.timer div:first-child{border-left:0;padding-left:0}
-.timer b{display:block;font-weight:600;font-size:clamp(1.9rem,7vw,4rem);letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1}
-.timer span{color:#77777e;font-size:.85rem;margin-top:.25rem;display:block}
-.live{font-size:2rem;font-weight:700;margin:3rem 0}
-.actions{display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{padding:.85rem 1.4rem;border-radius:6px;border:1px solid #34343a;color:#ececec;text-decoration:none;font-weight:600;font-size:.97rem}
-.btn:hover{border-color:#6a6a72}
-.btn.primary{background:#f97316;border-color:#f97316;color:#120a04}
-.btn.primary:hover{background:#fb8a3a;border-color:#fb8a3a}
+html,body{min-height:100%}
+html{background:#050403;min-height:100%}
+
+
+@media(prefers-reduced-motion:reduce){body::before{animation:none}}
+body{min-height:100vh;position:relative;isolation:isolate;color:#f6eee6;font-family:"Rubik",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow-x:hidden}
+main{position:relative;padding:2rem 1.25rem;display:flex;flex-direction:column;align-items:center}
+.logo{margin-bottom:1.4rem}
+.eyebrow{font-family:"Unbounded",sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.8rem;font-weight:700;color:#ff7a1a;margin-bottom:.8rem}
+h1{font-family:"Unbounded",sans-serif;font-size:clamp(2.2rem,7.5vw,5rem);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+h1 span{color:#ff7a1a}
+.sub{margin-top:1rem;color:#b9aa9b;font-size:1.15rem}
+.timer{display:flex;gap:clamp(.5rem,2vw,.9rem);margin:2.6rem 0}
+.timer div{background:rgba(10,8,7,.72);border-radius:12px;padding:1.1rem 0 .9rem;width:clamp(70px,19vw,118px)}
+.timer b{display:block;font-family:"Unbounded",sans-serif;font-size:clamp(1.7rem,6.5vw,2.9rem);font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.timer span{display:block;margin-top:.45rem;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff7a1a}
+.live{font-size:2rem;font-weight:800;color:#ff7a1a;margin:2.5rem 0}
+.actions{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
+.btn{padding:.9rem 1.7rem;border-radius:10px;background:rgba(10,8,7,.72);color:#f6eee6;text-decoration:none;font-weight:700;font-size:1.02rem;transition:background .15s}
+.btn:hover{background:#000}
+.btn.primary{background:#ff7a1a;color:#1a0d03}
+.btn.primary:hover{background:#ff8f3d}
+footer{display:flex;gap:1.5rem;padding:0 0 1.75rem;font-size:.9rem}
+footer a{color:#cdbfb1;text-decoration:none}
+footer a:hover{color:#ff7a1a}
 [hidden]{display:none!important}
+
+
+main::before{content:"";position:absolute;left:50%;top:50%;width:min(900px,120vw);height:min(560px,90vh);transform:translate(-50%,-50%);z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(255,106,0,.34),rgba(255,106,0,.12) 55%,transparent 100%)}
